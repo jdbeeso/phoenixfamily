@@ -1,0 +1,21 @@
+<%= form_for(@success) do |f| %>
+  <% @success.errors.full_messages.each do |error| %>
+    <li>
+      <%= error %>
+    </li>
+  <% end %>
+
+  <p>
+    <%= f.text_area :content, placeholder: 'Success Story Content' %>
+  </p>
+
+  <p>
+    <%= f.text_field :image, placeholder: 'Image URL' %>
+  </p>
+
+  <p>
+    <%= f.select :category, options_for_select(%w[senior family child], :include_blank => true) %>
+  </p>
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
