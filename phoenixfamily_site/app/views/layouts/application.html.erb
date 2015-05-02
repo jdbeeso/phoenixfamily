@@ -9,30 +9,17 @@
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <div id="wrap">
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-
+  <body>
     <div class="container">
 
-      <div class="row">
-        <div class="col-sm-6 col-sm-offset-3 text-center">
-          <%= render 'layouts/messages' %>
-        </div>
-      </div>
+      <%= render 'layouts/navigation' %>
 
-      <div class="row">
-        <div class="col-sm-12">
-          <%= yield %>
-        </div>
-      </div>
+      <%= yield %>
+    </div><!--/.container-->
 
-    </div>
-  </div>
+    <%= render 'layouts/footer' %>
 
-  <%= render 'layouts/footer' %>
-
-</body>
+    <%= javascript_include_tag "https://code.jquery.com/jquery.js", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js", "data-turbolinks-track" => true %>
+  </body>
 </html>
