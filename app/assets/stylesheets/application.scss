@@ -1,6 +1,11 @@
 /*
  * Overwritten by RailsBricks
  *
- *= require_self
  */
+@import "colors";
 @import "railsbricks_custom";
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "base";
