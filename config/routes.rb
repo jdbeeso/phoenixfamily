@@ -19,5 +19,7 @@ PhoenixfamilySite::Application.routes.draw do
   end
 
   resource :successes
-
+  get 'successes/families', to: 'successes#families', as: 'successes_families'
+  get 'successes/seniors', to: 'successes#seniors', as: 'successes_seniors'
+  get 'successes/children', to: 'successes#children', as: 'successes_children'
 end

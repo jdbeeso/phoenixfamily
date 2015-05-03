@@ -1,14 +1,21 @@
+<% if user_signed_in? %>
+	<h1><%= link_to 'Create Success Story', new_successes_path %></h1>
+<% end %>
+
 <div class="row">
 	<div class="col-md-4">
-		<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg" />
-		Senior Success Stories
+		<%= link_to(image_tag("http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg", :alt => "logo", :title => "Senior Success Stories"), successes_seniors_path) %>
+
+		<%= link_to 'Senior Success Stories', successes_seniors_path %>
 	</div>
 	<div class="col-md-4">
-		<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/139.jpg" />
-		Family Success Stories
+		<%= link_to(image_tag("http://placekitten.com.s3.amazonaws.com/homepage-samples/200/139.jpg", :alt => "logo", :title => "Family Success Stories"), successes_families_path) %>
+
+		<%= link_to 'Family Success Stories', successes_families_path %>
 	</div>
 	<div class="col-md-4">
-		<img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg" />
-		Child Success Stories
+		<%= link_to(image_tag("http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg", :alt => "logo", :title => "Child Success Stories"), successes_children_path) %>
+
+		<%= link_to 'Child Success Stories', successes_children_path %>
 	</div>
 </div>

@@ -1,5 +1,5 @@
 module SuccessesHelper
-	def article_params
-		params.require(:article).permit(:title, :body, :tag_list)
+	def success_params
+		params.require(:success).permit(:content, :image, :category)
 	end
 end

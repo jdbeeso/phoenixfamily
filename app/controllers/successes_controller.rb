@@ -1,4 +1,6 @@
 class SuccessesController < ApplicationController
+	include SuccessesHelper
+
 	def new
 		@success = Success.new
 	end
@@ -34,5 +36,17 @@ class SuccessesController < ApplicationController
 			@success = Success.find(params[:id])
 		rescue
 		end
+	end
+
+	def families
+		@families = Success.where(category: 'family')
+	end
+
+	def children
+		@children = Success.where(category: 'child')
+	end
+
+	def seniors
+		@seniors = Success.where(category: 'senior')
 	end
 end
