@@ -61,5 +61,3 @@ gem 'redcarpet', '3.2.3'
 group :production do
   gem 'unicorn'
 end
-
-gem 'will_paginate'
