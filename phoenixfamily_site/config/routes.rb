@@ -19,4 +19,6 @@ PhoenixfamilySite::Application.routes.draw do
     resources :posts
   end
 
+  resource :successes
+
 end
